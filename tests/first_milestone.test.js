@@ -1,13 +1,10 @@
 const chai = require('chai');
 const expect = chai.expect;
 const supertest = require('supertest');
-
-// import your app here
-const app = require('../.');
-
+const app = require('../routes/apiRoutes');
 const agent = supertest.agent(app);
 
-describe('User API Test', () => {
+describe('User API Test 1', () => {
 
 
     before(async () => {
@@ -37,10 +34,10 @@ describe('User API Test', () => {
     });
 
     after(async () => {
-        // run N times after each test
+        // run N times after each
     });
 
-    after(async () => {
+    afterEach(async () => {
         // run a single time after tests
     });
 
